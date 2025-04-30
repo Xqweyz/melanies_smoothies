@@ -1,0 +1,3 @@
+# requiretments.txt
+snowflkae-snowpark-python
+streamlit
