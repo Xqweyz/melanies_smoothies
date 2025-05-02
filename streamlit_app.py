@@ -6,8 +6,6 @@ from snowflake.snowpark.functions import col
 st.title(":cup_with_straw: Cuztomise Your Smoothie! :cup_with_straw:")
 st.write("Choose the fruits you want in your custom Smoothie!")
 
-
-
 name_on_order = st.text_input('Name on Smoothie')
 st.write('The name on your smoothie will be:', name_on_order)
 
@@ -27,8 +25,6 @@ if ingredients_list:
 
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
-
-    # st.write (ingredients_string)
 
     my_insert_stmt = """ insert into smoothies.public.orders
                 values (default, default, '"""+name_on_order+"""', '"""+ingredients_string+"""', default)"""
